@@ -1,0 +1,236 @@
+﻿@model IEnumerable<Practical_Training_View.Models.BloodNeed>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="slider">
+    <!-- Set up your HTML -->
+    <div class="owl-carousel ">
+        <div class="item">
+            <div class="slider-img"><img src="~/assets/images/slider/slider-2.jpg" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                        <div class="slider-captions">
+                            <h1 class="slider-title">حان الوقت للحصول على مساعدة أفضل</h1>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slider-img"> <img src="~/assets/images/slider/slider-3.jpg" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                        <div class="slider-captions">
+                            <h1 class="slider-title">تعرف على العديد من المعلومات </h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--*************** Key Features Starts Here ***************-->
+
+<div id="features" class="features container-fluid">
+    <div class="container">
+        <div class="session-title">
+            <h2>الملامح الرئيسية لمستشفانا</h2>
+            <p>نسعى دائما للحفاظ على سلامتك</p>
+        </div>
+        <div class="ker-featur-row row">
+            <div data-aos="fade-right" data-aos-duration="1500" class="col-md-4 featurecol feature-left">
+                <div class="single-feature">
+
+                    <div class="detail">
+                        <h6 style="margin-left:150px ;">100٪ أمان</h6>
+                        <p> نسعى دائما للحفاظ على الامان لتحقيق راحتك النفسية والتى تزيد من ثقتك بنا </p>
+                    </div>
+                    <div class="icon">
+                        <i class="far fa-bell"></i>
+                    </div>
+
+
+                </div>
+                <div class="single-feature">
+
+                    <div class="detail">
+                        <h6 style="margin-left:150px ;">أطباء ماهرون</h6>
+                        <p>لكل قسم الأطباء المتخصصين والمتواجدين دائما</p>
+                    </div>
+                    <div class="icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 featur-image">
+                <img src="~/assets/images/teb.jpg" alt="">
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1500" class="col-md-4 featurecol feature-right">
+
+                <div class="single-feature">
+                    <div class="icon">
+                        <i class="far fa-images"></i>
+                    </div>
+                    <div class="detail">
+                        <h6 style="margin-left: 150px; text-align: right">بيئة نظيفة</h6>
+                        <p>نحرص دائما على نظافة مستشفانا </p>
+                    </div>
+                </div>
+                <div class="single-feature">
+                    <div class="icon">
+                        <i class="fab fa-audible"></i>
+                    </div>
+                    <div class="detail">
+                        <h6 style="margin-left:160px ;">بحث طبى</h6>
+                        <p>متوفر العديد من الأبحاث الطبية والتى تساعد الأطباء فى البحث والتعلم</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--*************** Our Services Starts Here ***************-->
+
+
+<section class="our-service container-fluid">
+    <div class="container">
+        <div class="session-title row">
+            <h2>إليك اخر الأخبار</h2>
+            <p>جميع المعلومات التى تبحث عنها ستجدها هنا على موقعنا . تابع معنا اخر اخبار مستشفانا . ومتوفر ايضا بعض المقالات التى تنال إهتمامك حيث تضم معلوما صحية هامة </p>
+        </div>
+        <div class="col-sm-12 blog-cont">
+            <div class="row no-margin">
+                <center>
+                    <div class="col-lg-4 col-md-6 blog-smk" style="margin-left:40px ;">
+                        <div class="blog-single">
+
+
+                            <img src="~/assets/images/images (1).jpg" style="width: 2000px ;" alt="">
+
+                            <div style="margin-top: -20px ;" class="blog-single-det">
+
+                                <h6 style="font-style: bold ;">
+                                    <mark style="background-color:red;color:white">
+                                        @foreach (var item in Model)
+                                        {
+                                            @Html.DisplayFor(modelItem => item.Blood.Blood1)
+                                        }
+                                    </mark>
+                                    يوجد نقص فى فصيله الدم
+
+                                    بالمستشفى ؛ للتبرع وإنقاذ حياة مريض عليك
+                                    التوجه إلى المستشفى فى اقرب وقت
+
+
+
+                                </h6>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </center>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!--*************** About Us Starts Here ***************-->
+
+<div class="about-us">
+    <div class="row">
+
+        <div class="col-md-6 no-padding">
+            <img src="~/assets/images/covid19.jpg" alt="">
+        </div>
+        <div class="col-md-6 join-us-content">
+
+            <div class="bkgloq">
+                <div class="session-title row">
+                    <h2 style="text-align: right">تعرف اكثر على فيروس كورونا</h2>
+
+                </div>
+                <p style="text-align: right">
+                    تواصل منظمة الصحة العالمية رصد هذه الجائحة والاستجابة لها. وستُحدّث هذه الأسئلة ‏والأجوبة كلما زادت المعارف بشأن كوفيد-19 وطريقة انتشاره وتأثيره على الناس في ‏شتى أنحاء العالم. وللحصول على المزيد من المعلومات، واظب على مطالعة صفحات
+                    ‏المنظمة الخاصة بكوفيد-19.‏ .
+                </p>
+                <p style="text-align: right">فيروسات كورونا فصيلة واسعة الانتشار معروفة بأنها تسبب أمراضاً تتراوح من نزلات البرد الشائعة إلى الاعتلالات الأشد وطأة مثل متلازمة الشرق الأوسط التنفسية (MERS) ومتلازمة الالتهاب الرئوي الحاد الوخيم (السارس). </p>
+                <p style="text-align: right">
+                    كوفيد-19 هو المرض الناجم عن فيروس كورونا المُستجد المُسمى فيروس كورونا-سارس- 2. وقد اكتشفت المنظمة هذا الفيروس المُستجد لأول مرة في 31 كانون الأول/ ديسمبر 2019، بعد الإبلاغ عن مجموعة من حالات الالتهاب الرئوي الفيروسي في يوهان بجمهورية
+                    الصين الشعبية.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  *************************Our Team Start Here ************************** -->
+<hr>
+<div class="about-us">
+    <div class="row">
+
+        <div class="col-md-6 no-padding">
+            <img src="~/assets/images/logo2.jpg" style="width:600px ; margin-left: 100px;" alt="">
+        </div>
+        <div class="col-md-6 join-us-content">
+
+            <div class="bkgloq">
+
+                <h4 dir="auto" style="margin-top: 100px; text-align: right">
+                    تدريب طلاب برنامج الأطراف الصناعية والأجهزة التقويمية داخل عيادة القدم السكري بمستشفى جامعة بنى سويف، حيث يهدف التدريب لمنح الطلاب فرصة تعليمية عملية في مجالات تصنيع الأطراف الصناعية وتزويدهم بما يلزم من تدريب مهني جيد، لإكسابهم خبرات
+                    متميزة حتى يتمكنوا من المنافسة في سوق العمل
+                </h4>
+                <h6 style="text-align: right">
+                    7:00 PM - 15/5/2022
+                </h6>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ######## Our Team End ####### -->
+<!--*************** Our Blog Starts Here ***************-->
+
+<hr>
+<div class="about-us">
+    <div class="row">
+
+        <div class="col-md-6 no-padding">
+            <img src="~/assets/images/1357615_0.jpg" style="width:600px ; margin-left: 100px;" alt="">
+        </div>
+        <div class="col-md-6 join-us-content">
+
+            <div class="bkgloq">
+
+                <h4 dir="auto" style="margin-top: 100px ; text-align:right">
+                    تقوم مستشفى بني سويف الجامعى بتجهيز قسم خاص للحروق والتجميل وسوف يشمل جميع انواع العلاجات التى تنتمى الى مجال الجراحة التجميلية مثل : علاج المصابين بالحروق في كافة مراحلها وحتى في حالات الحروق الشديدة التعقيد تجميل تشوهات الحروق بكل
+                    درجاتها ترميم الندبات المشوهة عقب التعرض لصدمات وأورام الجلد وترميم مجموعة واسعة من التشوهات الخلقية والمكتسبة نتيجة عمليات سابقة الجراحة التجميلية للوجه والصدر ونحت الجسم بالأضافة ألى أستخدام الطرق التجميلية كحقن الفللر والبوتوكس
+                    أتباع أحدث الطرق في علاج الندب باستخدام الليزر الوخز بالأبر أو زراعة الدهون أو أعادة التصبغ
+                </h4>
+                <h6>
+                    7:00 PM - 15/5/2022
+                </h6>
+            </div>
+
+        </div>
+    </div>
+</div>
+

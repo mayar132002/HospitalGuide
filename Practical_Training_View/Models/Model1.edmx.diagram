@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f39f5f772a841f38b9241bffdddf0ba" Name="Diagram1">
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Admin" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Artical" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Blood" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.BloodNeed" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.BloodNeeded" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Care_Units" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Department" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Newss" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.patient" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.Role" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_Services_GiudDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_Admin_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_Admin_Roles1" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_Articals_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_BloodNeeded_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_Care_Units_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_Department_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_Newss_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_patient_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_BloodNeed_Blood" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_patient_Care_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_Services_GiudDBModel.FK_patient_Department" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

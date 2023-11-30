@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Practical_Training_View.Models.Newss>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="~/assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/css/responsive.css" rel="stylesheet" />
+</head>
+<div id="blog" class="container-fluid blog" style="padding-top:140px">
+    <div class="container">
+        <section class="event_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h3 style="left:960px;">
+                        أخر الاخبار
+                    </h3>
+
+                </div>
+                <div class="event_container">
+                    @foreach (var item in Model)
+                    {
+                        <div class="box">
+
+                            <div class="detail-box">
+                                <h4 dir="auto" style="text-align: right; padding: 20px;">
+                                    @Html.DisplayFor(modelItem => item.News_Content)
+                                </h4>
+                                <h6>
+                                    @Html.DisplayFor(modelItem => item.News_Date)
+                                </h6>
+                            </div>
+                            <div class="img-box">
+                                @{
+                                    string LoadImage(string url)
+                                    {
+                                        byte[] imageArray = System.IO.File.ReadAllBytes(url);
+                                        string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+                                        return "data:image/png;base64," + base64ImageRepresentation;
+                                    }
+                                }
+
+                                <img src=@LoadImage("C:/Users/HP/Desktop/hospitalguide/dashboard(HospitalGuide)/dashboard(HospitalGuide)/ImgUpload/"+item.News_Image) />
+                            </div>
+                        </div> 
+                    }
+                    </div>
+            </div>
+        </section>
+
+    </div>
+
+</div>

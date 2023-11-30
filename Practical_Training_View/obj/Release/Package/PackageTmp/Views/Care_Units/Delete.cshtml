@@ -1,0 +1,81 @@
+﻿@model Practical_Training_View.Models.Care_Units
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Care_Units</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_NumberOfemptybed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_NumberOfemptybed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_NumberOfbed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_NumberOfbed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Numberofemployees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Numberofemployees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Admin.Admin_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admin.Admin_Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

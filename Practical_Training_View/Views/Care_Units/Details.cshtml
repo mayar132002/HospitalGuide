@@ -1,0 +1,75 @@
+﻿@model Practical_Training_View.Models.Care_Units
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Care_Units</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_NumberOfemptybed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_NumberOfemptybed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_NumberOfbed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_NumberOfbed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Care_Numberofemployees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Care_Numberofemployees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Admin.Admin_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admin.Admin_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Care_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Practical_Training_View.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="~/assets/images/fav.jpg">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/DEPT/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="~/DEPT/CSS/normalize.css">
+    <link rel="stylesheet" href="~/DEPT/CSS/style.css">
+    <link rel="stylesheet" href="~/DEPT/CSS/fontawesome.min.css">
+    <link rel="stylesheet" href="~/DEPT/CSS/all.min.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="~/DEPT/CSS/css.css">
+    
+</head>
+
+@{ 
+    string a = "#collapse";
+    string b = "collapse";
+    string c = "heading";
+    int x = 1;
+}
+
+@foreach (var item in Model)
+{
+     
+        a = a + x.ToString();
+        b = b + x.ToString();
+        c = c + x.ToString();
+    <div class="page-nav row">
+            <div class="container">
+                <div class="row">
+                    <h2>@Html.DisplayFor(modelItem => item.dept_Name)</h2>
+                </div>
+            </div>
+        </div>
+        <div class="about-us" style="padding-top:110px" id=@x>
+            <center>
+                <div class="conf">
+
+                    <div class="div-right">
+                        <div class="content" id="accordion">
+                            <div class="text">
+                                <h2>اسم القسم </h2>
+                                <h6>@Html.DisplayFor(modelItem => item.dept_Name)</h6>
+
+                            </div>
+
+                            <div class="text">
+                                <h2>وصف القسم </h2>
+                                <p style="text-align:right">
+
+                                </p>
+                                <div class="" id=@c>
+                                    <h5 class="mb-0 icon">
+                                        <i class="fa-solid fa-angle-down icons" data-toggle="collapse" data-target=@a aria-expanded="true" aria-controls=@b>
+                                        </i>
+                                    </h5>
+                                </div>
+                                <div id=@b class="collapse" aria-labelledby=@c data-parent="#accordion">
+                                    <div class="card-body" style="text-align:right">
+                                        @Html.DisplayFor(modelItem => item.dept_Descripation)
+                                    </div>
+                                </div>
+                            </div>
+                            @{
+                                x++;
+                                a = a + x.ToString();
+                                b = b + x.ToString();
+                                c = c + x.ToString();
+                             }
+                           
+                            <div class="text">
+                                <h2>معلومات عن القسم </h2>
+                                <p style="text-align:right">
+                                    
+                                </p>
+                                <div class="" id=@c>
+                                    <h5 class="mb-0 icon">
+                                        <div class="icons" onclick="show()">
+                                            <i class="fa-solid fa-angle-down icons" data-toggle="collapse" data-target=@a aria-expanded="true" aria-controls=@b class="hhh3" onclick="swab3()">
+                                            </i>
+                                            <i class="fa-solid fa-angle-up icons" data-toggle="collapse" data-target=@a aria-expanded="true" aria-controls=@b style="display: none">
+                                            </i>
+                                        </div>
+                                    </h5>
+                                </div>
+
+                                <div id=@b class="collapse" aria-labelledby=@c data-parent="#accordion">
+                                    <div class="card-body">
+                                        @Html.DisplayFor(modelItem => item.dept_Info)<br />
+                                        عدد الاسره : @Html.DisplayFor(modelItem => item.dept_NumberOfBed)<br />
+                                        عدد الاسره الفارغه : @Html.DisplayFor(modelItem => item.dept_NumberOfemptybed)<br />
+                                    </div>
+                                </div>
+                                @{ 
+                                    x++;
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="div-left">
+                        <img src="~/images/pexels-karolina-grabowska-4021801.jpg" alt="" style="height:800px;width:800px">
+                    </div>
+                </div>
+            </center>
+        </div>
+}
+

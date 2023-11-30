@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Hospital_Services_GiudDBEntities-Web.config Connection String" description="Hospital_Services_GiudDBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-9H742G8;initial catalog=Hospital_Services_GiudDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\HP\\Desktop\\Practical_Training_View\\Practical_Training_View\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Hospital_Services_GiudDBEntities']/@connectionString" />
+  </parameter>
+  <parameter name="Practical_Training_ViewContext-Web.config Connection String" description="Practical_Training_ViewContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=Practical_Training_ViewContext-20220630060112; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|Practical_Training_ViewContext-20220630060112.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\HP\\Desktop\\Practical_Training_View\\Practical_Training_View\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Practical_Training_ViewContext']/@connectionString" />
+  </parameter>
+</parameters>
